@@ -11,9 +11,14 @@
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=wwoop723-ship-it&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
+# 📊 Publications:
 ---
 [![](https://visitcount.itsvg.in/api?id=wwoop723-ship-it&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+# ya like jazz?
+
+[hugging face something](https://huggingface.co/avawancitte)
+
+
 
 
