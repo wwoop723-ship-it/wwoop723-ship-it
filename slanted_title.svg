@@ -1,37 +1,73 @@
-<svg fill="none" viewBox="0 0 450 60" width="450" height="60" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 500 120" width="500" height="120" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        .slanted-box-container {
+        /* General Setup */
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
           width: 100%;
           height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .slanted-box {
-          /* 1. Skew the background/box itself */
-          transform: skewX(-15deg); /* Adjust -15deg for different slant angles */
-          background: linear-gradient(to right, #1f4788, #30589a); /* Dark blue gradient */
-          color: white;
-          padding: 10px 30px;
-          text-align: center;
-          font-size: 24px;
-          font-weight: 700;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-          line-height: 1.2;
-          /* This height adjustment prevents clipping of the slanted edges */
-          height: 40px; 
-        }
-        .text-content {
-          /* 2. Apply reverse skew to keep the text straight */
-          transform: skewX(15deg); 
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        /* Styling for the Slanted Card Wrapper */
+        .slanted-card-wrapper {
+          /* Apply the slant to the container box */
+          transform: skewX(-15deg); /* Slant angle */
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          width: 220px;
+          height: 80px;
+          /* Semi-transparent dark background */
+          background-color: rgba(30, 40, 50, 0.9); 
+        }
+
+        /* Styling for the Inner Content (Un-skewed) */
+        .card-content {
+          /* Reverse the slant to make the text straight */
+          transform: skewX(15deg); 
+          color: white;
+          padding: 10px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .main-text {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .sub-text {
+          font-size: 14px;
+          color: #cccccc;
+        }
       </style>
-      <div class="slanted-box-container">
-        <div class="slanted-box">
-          <span class="text-content">My Project Title and Slanted Header</span>
+      
+      <div class="container">
+        <!-- CARD 1 -->
+        <div class="slanted-card-wrapper">
+          <div class="card-content">
+            <div class="main-text">120</div>
+            <div class="sub-text">Total Commits</div>
+          </div>
+        </div>
+        
+        <!-- CARD 2 -->
+        <div class="slanted-card-wrapper" style="background-color: rgba(60, 40, 30, 0.9);"> 
+          <!-- A slightly different background color for variety -->
+          <div class="card-content">
+            <div class="main-text">Active!</div>
+            <div class="sub-text">Status (Updated Daily)</div>
+          </div>
         </div>
       </div>
     </div>
