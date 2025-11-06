@@ -8,7 +8,7 @@
           height: 100%;
           text-align: center;
           padding: 10px 0;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Verdana, sans-serif;
         }
         
         /* COMMON STYLING FOR ALL BARS */
