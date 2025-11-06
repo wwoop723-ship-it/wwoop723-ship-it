@@ -13,7 +13,10 @@
 
 # 📊 Publications:
 ---
-[![](https://visitcount.itsvg.in/api?id=wwoop723-ship-it&icon=0&color=0)](https://visitcount.itsvg.in)
+[![](https://![gif_1762394133](https://github.com/user-attachments/assets/95b524dd-c4ab-4059-883a-2ac417d3bb8d)
+visitcount.itsvg.in/api?id=wwoop723-ship-it&icon=0&color=0)](https://visitcount.itsvg.in)
+
+
 
 # ya like jazz?
 
