@@ -1,73 +1,143 @@
-<svg fill="none" viewBox="0 0 500 120" width="500" height="120" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 550 300" width="550" height="300" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        /* General Setup */
-        .container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
+        /* BASE STYLES & FONT */
+        .page-container {
           width: 100%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px; /* Space between rows */
+          padding: 10px 0;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        /* Styling for the Slanted Card Wrapper */
-        .slanted-card-wrapper {
-          /* Apply the slant to the container box */
-          transform: skewX(-15deg); /* Slant angle */
-          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          width: 220px;
-          height: 80px;
-          /* Semi-transparent dark background */
-          background-color: rgba(30, 40, 50, 0.9); 
+        
+        /* COMMON STYLING FOR ALL BARS */
+        .bar-wrapper {
+          /* CORE SLANT EFFECT: -15deg skew for the turned-away look */
+          transform: skewX(-15deg); 
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(30, 40, 50, 0.95); /* Dark background */
+          height: 50px; /* Standard bar height */
         }
-
-        /* Styling for the Inner Content (Un-skewed) */
-        .card-content {
-          /* Reverse the slant to make the text straight */
-          transform: skewX(15deg); 
+        
+        .content {
+          /* REVERSE SLANT to keep the text straight and readable */
+          transform: skewX(15deg);
           color: white;
-          padding: 10px;
+          padding: 5px 15px;
+          text-align: left;
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
         }
 
+        /* HEADER BAR (Long) */
+        .header-bar-wrapper {
+          width: 95%; /* Almost full width */
+          margin-bottom: 5px;
+          height: 60px; /* Taller height for header */
+        }
+
+        .header-content .main-text {
+          font-size: 24px;
+          font-weight: 900;
+          color: #ff9900; /* Bright accent color for the main title */
+        }
+        
+        /* GRID LAYOUT (3 rows, 2 items each) */
+        .grid-container {
+          width: 95%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .grid-row {
+          display: flex;
+          gap: 10px;
+        }
+
+        .item-bar-wrapper {
+          width: 50%; /* Each item takes half the row width */
+        }
+
+        /* TEXT STYLING */
         .main-text {
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 700;
-          margin-bottom: 2px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
+          margin-bottom: 0;
+          line-height: 1.2;
         }
 
         .sub-text {
-          font-size: 14px;
+          font-size: 12px;
           color: #cccccc;
+          line-height: 1.2;
         }
       </style>
       
-      <div class="container">
-        <!-- CARD 1 -->
-        <div class="slanted-card-wrapper">
-          <div class="card-content">
-            <div class="main-text">120</div>
-            <div class="sub-text">Total Commits</div>
+      <div class="page-container">
+        <div class="bar-wrapper header-bar-wrapper">
+          <div class="content header-content">
+            <div class="main-text">PROJECT DATA & NAVIGATION MENU</div>
           </div>
         </div>
-        
-        <!-- CARD 2 -->
-        <div class="slanted-card-wrapper" style="background-color: rgba(60, 40, 30, 0.9);"> 
-          <!-- A slightly different background color for variety -->
-          <div class="card-content">
-            <div class="main-text">Active!</div>
-            <div class="sub-text">Status (Updated Daily)</div>
+
+        <div class="grid-container">
+          
+          <div class="grid-row">
+            <div class="bar-wrapper item-bar-wrapper" style="background-color: rgba(60, 40, 30, 0.95);">
+              <div class="content">
+                <div class="main-text">15</div>
+                <div class="sub-text">Days Since Last Update</div>
+              </div>
+            </div>
+            <div class="bar-wrapper item-bar-wrapper">
+              <div class="content">
+                <div class="main-text">5.8K Lines</div>
+                <div class="sub-text">Total Codebase Size</div>
+              </div>
+            </div>
           </div>
+
+          <div class="grid-row">
+            <div class="bar-wrapper item-bar-wrapper">
+              <div class="content">
+                <div class="main-text">⭐️ 42</div>
+                <div class="sub-text">Stars on GitHub</div>
+              </div>
+            </div>
+            <div class="bar-wrapper item-bar-wrapper" style="background-color: rgba(30, 60, 30, 0.95);">
+              <div class="content">
+                <div class="main-text">Status: Stable</div>
+                <div class="sub-text">Ready for Production</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid-row">
+            <div class="bar-wrapper item-bar-wrapper" style="background-color: rgba(30, 30, 60, 0.95);">
+              <div class="content">
+                <div class="main-text">Wiki Link</div>
+                <div class="sub-text">Go to Documentation</div>
+              </div>
+            </div>
+            <div class="bar-wrapper item-bar-wrapper">
+              <div class="content">
+                <div class="main-text">Discord</div>
+                <div class="sub-text">Join the Community</div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
